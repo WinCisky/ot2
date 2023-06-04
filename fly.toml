@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for little-waterfall-8403 on 2023-06-04T18:58:17+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "little-waterfall-8403"
+primary_region = "ams"
+
+[http_service]
+  internal_port = 8081
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+[env]
+  PORT = "8081"
+  HOST = "little-waterfall-8403.fly.dev"
+  SHOPIFY_API_KEY = "8f7c991a044df883ed564f7148aead37"
+  SCOPES = "write_products"
+[[services]]
+  internal_port = 8081
